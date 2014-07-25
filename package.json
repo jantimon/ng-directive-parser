@@ -1,0 +1,38 @@
+{
+  "name": "ng-directive-parser",
+  "version": "0.0.1",
+  "main": "lib/ng-directive-parser.js",
+  "description": "Extracts angular directive information from source",
+  "homepage": "https://github.com/jantimon/ng-directive-parser",
+  "bugs": "https://github.com/jantimon/ng-directive-parser/issues",
+  "author": {
+    "name": "Jan Nicklas",
+    "email": "j.nicklas@me.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jantimon/ng-directive-parser"
+  },
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "ng-directive-parser",
+    "ng angular directive"
+  ],
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^0.4.0",
+    "time-grunt": "^0.3.1",
+    "jshint-stylish": "^0.2.0"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "dependencies": {
+    "esprima": "^1.2.2"
+  }
+}
