@@ -9,29 +9,22 @@ Install the module with: `npm install ng-directive-parser`
 
 ```js
 var ng-directive-parser = require('ng-directive-parser');
-ng-directive-parser.awesome(); // "awesome"
+var directives = ngDirectiveParser.parseFile('directives.js');
+
+/* Result:
+ [{ filename: 'directives.js',
+    name: 'demoDirective',
+    restrict: { A: true, E: true } 
+ }];
+ */
+
 ```
 
 Install with cli command
 
 ```sh
-$ npm install -g ng-directive-parser
-$ ng-directive-parser --help
-$ ng-directive-parser --version
+$ npm install ng-directive-parser
 ```
-
-
-
-
-## Documentation
-
-_(Coming soon)_
-
-
-## Examples
-
-_(Coming soon)_
-
 
 ## Contributing
 
