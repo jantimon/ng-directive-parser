@@ -6,6 +6,7 @@ app.directive('demoDirective1', function () {
     scope: {
       action: '&'
     },
+    template: '<demo-directive2 data-action="foo">Conten</demo-directive2>',
     link: function ($scope) {
     }
   };
@@ -15,6 +16,7 @@ app.directive('demoDirective2', function () {
     restrict: 'AE',
     transclude: true,
     replace: true,
+    templateUrl: 'template.html',
     scope: {
       action: '&'
     },

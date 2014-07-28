@@ -12,6 +12,7 @@ define(
         scope: {
           action: '&'
         },
+        template: '<demo-directive2 data-action="foo">Conten</demo-directive2>',
         link: function ($scope) {
         }
       };
@@ -21,6 +22,7 @@ define(
         restrict: 'AE',
         transclude: true,
         replace: true,
+        templateUrl: 'template.html',
         scope: {
           action: '&'
         },

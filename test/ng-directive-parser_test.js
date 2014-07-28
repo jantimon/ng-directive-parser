@@ -68,5 +68,19 @@ exports.ngDirectiveParser = {
     test.equal(directives[3].restrict.C, true, 'should recognise that demoDirective4 is a class directive');
     test.equal(directives[4].restrict.C, true, 'should recognise that demoDirective5 is a class directive');
     test.done();
+  },
+  'template': function (test) {
+    var directives = ngDirectiveParser.parseFile(__dirname + '/fixtures/requirejs-directives.js');
+    test.expect(1);
+    // tests here
+    test.equal(directives[0].template, '<demo-directive2 data-action="foo">Conten</demo-directive2>', 'should return the template.');
+    test.done();
+  },
+  'templateUrl': function (test) {
+    var directives = ngDirectiveParser.parseFile(__dirname + '/fixtures/requirejs-directives.js');
+    test.expect(1);
+    // tests here
+    test.equal(directives[1].templateUrl, 'template.html', 'should return the template url.');
+    test.done();
   }
 };
