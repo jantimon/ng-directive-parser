@@ -23,7 +23,7 @@ module.exports = function (grunt) {
         src: ['lib/**/*.js']
       },
       test: {
-        src: ['test/**/*.js', '!test/fixtures/**']
+        src: ['test/*.js']
       }
     },
     watch: {

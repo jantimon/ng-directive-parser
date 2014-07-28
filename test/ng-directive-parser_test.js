@@ -57,7 +57,7 @@ exports.ngDirectiveParser = {
   },
   'restrictions': function (test) {
     var directives = ngDirectiveParser.parseFile(__dirname + '/fixtures/plain-directives.js');
-    test.expect(6);
+    test.expect(8);
     // tests here
     test.equal(directives[0].restrict.A, false, 'should recognise that demoDirective1 is not an attribute directive');
     test.equal(directives[0].restrict.E, true, 'should recognise that demoDirective1 is an element directive');
@@ -65,6 +65,8 @@ exports.ngDirectiveParser = {
     test.equal(directives[1].restrict.E, true, 'should recognise that demoDirective2 is an element directive');
     test.equal(directives[2].restrict.A, true, 'should recognise that demoDirective3 is an attribute directive');
     test.equal(directives[2].restrict.E, false, 'should recognise that demoDirective3 is not an element directive');
+    test.equal(directives[3].restrict.C, true, 'should recognise that demoDirective4 is a class directive');
+    test.equal(directives[4].restrict.C, true, 'should recognise that demoDirective5 is a class directive');
     test.done();
   }
 };

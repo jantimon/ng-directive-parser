@@ -36,7 +36,7 @@ app.directive('demoDirective3', function () {
 });
 app.directive('demoDirective4', ['$rootScope', function ($rootScope) {
   return {
-    restrict: 'A',
+    restrict: 'C',
     transclude: false,
     replace: false,
     scope: {
@@ -47,7 +47,7 @@ app.directive('demoDirective4', ['$rootScope', function ($rootScope) {
   };
 }]);
 app.directive('demoDirective5', {
-  restrict: 'A',
+  restrict: 'ACE',
   transclude: false,
   replace: true,
   scope: {
