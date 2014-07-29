@@ -69,6 +69,14 @@ exports.ngDirectiveParser = {
     test.equal(directives[4].restrict.C, true, 'should recognise that demoDirective5 is a class directive');
     test.done();
   },
+  'restrictionDefaults': function (test) {     
+    var directives = ngDirectiveParser.parseFile(__dirname + '/fixtures/plain-directives.js');
+    test.expect(3);
+    test.equal(directives[6].restrict.A, true, 'by default a directive is an attribute directive');
+    test.equal(directives[6].restrict.C, false, 'by default a directive is not a class directive');
+    test.equal(directives[6].restrict.E, false, 'by default a directive is not an element directive');
+    test.done();
+  },
   'template': function (test) {
     var directives = ngDirectiveParser.parseFile(__dirname + '/fixtures/requirejs-directives.js');
     test.expect(1);
