@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Angular directive parser demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <script src="main.bundle.js"></script>
+  </head>
+  <body>
+
+  <div class="container">
+      <h1>Angular directive parser demo</h1>
+      <textarea id="input" style="width:100%; min-height: 250px;">
+app.directive('demoDirective1', function () {
+  return {
+    restrict: 'E',
+    transclude: true,
+    replace: true,
+    scope: {
+     action: '&'
+    },
+    template: '<demo-directive2 data-action="foo">Content</demo-directive2>',
+    link: function ($scope) {
+    }
+  };
+});
+      </textarea>
+      <button type="button" class="btn btn-primary" onclick="parse()">Parse</button>
+  </div>
+
+  <div class="container">
+      <pre id="output" style="width:100%; min-height: 50px;"></pre>
+   </div>
+
+  </body>
+</html>

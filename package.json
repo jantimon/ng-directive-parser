@@ -1,0 +1,23 @@
+{
+  "name": "ng-directive-parser-page",
+  "homepage": "https://github.com/jantimon/ng-directive-parser",
+  "bugs": "https://github.com/jantimon/ng-directive-parser/issues",
+  "author": {
+    "name": "Jan Nicklas",
+    "email": "j.nicklas@me.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jantimon/ng-directive-parser"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^5.9.1"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "dependencies": {
+    "ng-directive-parser": "*"
+  }
+}
