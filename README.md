@@ -1,8 +1,7 @@
 # ng-directive-parser [![Build Status](https://secure.travis-ci.org/jantimon/ng-directive-parser.png?branch=master)](http://travis-ci.org/jantimon/ng-directive-parser)
 
-> Extracts angular directive information from source  
-> Try the **[online demo](http://jantimon.github.io/ng-directive-parser/)**
-
+This module uses Esprima to turn Angular Directive javascript source code into json format  
+A browserified version can be seen in the **[online demo](http://jantimon.github.io/ng-directive-parser/)**
 
 ## Getting Started
 
