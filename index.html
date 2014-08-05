@@ -7,14 +7,31 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
     <script src="main.bundle.js"></script>
   </head>
   <body>
-
   <div class="container">
-      <h1>Angular directive parser demo</h1>
-      <p>This module uses Esprima to turn Angular Directive javascript code into json format</p>
-      <textarea id="input" style="width:100%; min-height: 250px;">
+
+      <header>
+          <h1>Angular directive parser demo</h1>
+
+          <p class="view"><a href="https://github.com/jantimon/ng-directive-parser">View the Project on GitHub
+              <small>jantimon/ng-directive-parser</small>
+          </a></p>
+          <ul>
+              <li><a href="https://github.com/jantimon/ng-directive-parser/zipball/master">Download <strong>ZIP File</strong></a></li>
+              <li><a href="https://github.com/jantimon/ng-directive-parser/tarball/master">Download <strong>TAR Ball</strong></a></li>
+              <li><a href="https://github.com/jantimon/ng-directive-parser/">View On <strong>GitHub</strong></a></li>
+          </ul>
+      </header>
+
+      <section>
+        <h2>Demo</h2>
+        <p>This module uses Esprima to turn Angular Directive javascript code into json format</p>
+
+        <div class="source-form">
+        <textarea id="input" class="source">
 app.directive('demoDirective1', function () {
   return {
     restrict: 'E',
@@ -28,13 +45,19 @@ app.directive('demoDirective1', function () {
     }
   };
 });
-      </textarea>
-      <button type="button" class="btn btn-primary" onclick="parse()">Parse</button>
-  </div>
+        </textarea>
+        <button type="button" class="btn btn-primary source-submit" onclick="parse()">Parse</button>
+      </div>
 
-  <div class="container">
-      <pre id="output" style="width:100%; min-height: 50px;"></pre>
-   </div>
+      <h3>Result</h3>
+      <pre id="output" style="min-height: 150px;">Please press the "parse" button</pre>
+
+      <h2>License</h2>
+
+      <p>Copyright (c) 2014 Jan Nicklas
+      Licensed under the MIT license.</p>
+      </section>
+  </div>
 
   </body>
 </html>
